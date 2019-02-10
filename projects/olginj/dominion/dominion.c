@@ -644,7 +644,6 @@ int getCost(int cardNumber)
 }
 
 
-
 int smithyCard(int handPos, int currentPlayer, struct gameState *state){
     //+3 Cards
     int i;
@@ -712,7 +711,6 @@ int sea_hagCard(int currentPlayer, struct gameState *state) {
     
     return 0;
 }
-
 
 
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
@@ -1204,7 +1202,6 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		
     case outpost:
         outpostCard(handPos, currentPlayer, state, 0);
-            
 		
     case salvager:
       //+1 buy
@@ -1224,8 +1221,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		
     case sea_hag:
         sea_hagCard(currentPlayer, state);
-          
-		
+
     case treasure_map:
       //search hand for another treasure_map
       index = -1;
