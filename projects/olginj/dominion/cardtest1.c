@@ -2,7 +2,7 @@
 //  cardtest4.c
 //  
 //
-//  Created by John Olgin on 2/10/19.
+//  Created by John Olgin on 2/08/19.
 //
 
 #include "dominion.h"
@@ -44,7 +44,7 @@ int main () {
     game.hand[0][0] = smithy;
     game.deckCount[0] = 5;
     
-    //Save the current settings of the gamestate to check against the gamestate after the smithy card has been played
+    
     numActions = game.numActions;
     p1DeckCount = game.deckCount[0];
     p1HandCount = game.handCount[0];

@@ -2,7 +2,7 @@
 //  cardtest4.c
 //  
 //
-//  Created by John Olgin on 2/10/19.
+//  Created by John Olgin on 2/08/19.
 //
 #include "stdlib.h"
 #include "stdio.h"
@@ -113,10 +113,9 @@ int main () {
     
     
     
-    //if all of this was verified, print that this test was successful
+    // Add up verifications and pass if still 0
     if(validCheck == 0)
         printf("CARD TEST 4 PASSED\n");
-    //if a section could not be verified, print that this test was a faliure
     else
         printf("CARD TEST 4 FAILED\n");
     return 0;

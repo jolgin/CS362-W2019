@@ -2,7 +2,7 @@
 //  cardtest2.c
 //  
 //
-//  Created by John Olgin on 2/10/19.
+//  Created by John Olgin on 2/08/19.
 //
 
 #include "dominion.h"
@@ -37,7 +37,7 @@ int main () {
     int k[10] = {adventurer, smithy, treasure_map, baron, outpost, curse, salvager, mine, sea_hag, tribute};
     initializeGame(2, k, 7, &game);
     
-    //Set and save gamestate of player 2 (to check against after the adventurer card has been played for any changes)
+    // Set player 2's info
     game.discardCount[1] = 0;
     game.whoseTurn = 1;
     game.hand[1][0] = adventurer;
@@ -115,11 +115,9 @@ int main () {
    
     
     
-    
-    //if all of this was verified, print that this test was successful
+    // Add up all verifications and pass if still 0
     if(validationCheck  == 0)
         printf("CARD TEST 2 PASSED \n\n");
-    //if a section could not be verified, print that this test was a faliure
     else
         printf("CARD TEST 2 FAILED \n\n");
     return 0;
