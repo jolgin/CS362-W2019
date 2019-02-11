@@ -719,6 +719,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   int j;
   int k;
   int x;
+    int val;
   int index;
   int currentPlayer = whoseTurn(state);
   int nextPlayer = currentPlayer + 1;
@@ -737,8 +738,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-      adventurerCard(drawntreasure, state, currentPlayer, z);
-			
+      val = adventurerCard(drawntreasure, state, currentPlayer, z);
+            return val;
     case council_room:
       //+4 Cards
       for (i = 0; i < 4; i++)
@@ -817,7 +818,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case gardens:
-      gardenCard();
+            val = gardenCard();
+            return val;
 			
     case mine:
       j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -882,7 +884,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		
     case smithy:
       //+3 Cards
-      smithyCard(handPos, currentPlayer, state);
+      val = smithyCard(handPos, currentPlayer, state);
+        return val;
 		
     case village:
       //+1 Card
