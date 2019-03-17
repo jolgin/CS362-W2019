@@ -55,29 +55,23 @@ int main () {
     getReturn =  cardEffect(smithy, 1, 1, 1, &game, p1HandCount, NULL);
     
     // Check that the function returned successfully
-    printf("Checking that function returned successfully...");
     validCheck = validCheck + validate(getReturn == 0);
     // Check that actions weren't changed
-    printf("Checking that actions are unchanged...");
     validCheck = validCheck + validate((numActions == game.numActions));
     
     
     // Player 1 checks
     // Check player 1 hand count (should be two more than beginning since drawing 3 and discarding 1)
-    printf("Checking that player 1's hand count increases by 2...");
     p1HandCount = p1HandCount + 2;
     validCheck = validCheck + validate((p1HandCount == game.handCount[0]));
     // Check that player 1's deck count is 3 less
-    printf("Checking that player 1's deck count decreased by 3...");
     validCheck = validCheck + validate(p1DeckCount - 3 == game.deckCount[0]);
     
     
     // Player 2 checks
     // Check that player 2's hand count is unchanged
-    printf("Checking that player 2's hand count is unchanged...");
     validCheck = validCheck + validate(p2HandCount == game.handCount[1]);
     // Check that player 2's deck count is unchanged
-    printf("Checking that player 2's deck count is unchanged...");
     validCheck = validCheck + validate(p2DeckCount == game.deckCount[1]);
     
     
